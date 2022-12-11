@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Js Dynamic Data Binding</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<style type="text/css">
+		.one{
+			color: orange;
+			text-align: center;
+			padding: 10px 10px;
+			box-shadow: 10px 5px 17px 19px red;
+		}
+		.two{
+			text-decoration: line-through;
+		}
+		.three{
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+
+
+	<!-- link UP Data Binding Vue Js -->
+	<div id="data_binding">
+		<a v-bind:href="address">Vue Js Org</a>
+		<h3 :class="classes">Hellow World</h3>
+		<input type="text" name="" v-bind:value="name">
+	</div>
+	<!-- link UP Data Binding Vue Js -->
+	<script type="text/javascript">
+		let data_binding = new Vue({
+			el:'#data_binding',
+			data:{
+				address: 'https://vuejs.org/',
+				classes:['one','two','three'],
+				name:'Nazrul Islam'
+			},
+		})
+	</script>
+</body>
+</html>

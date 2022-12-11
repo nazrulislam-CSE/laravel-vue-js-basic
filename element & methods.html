@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Js Element & Mehods</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+	<!-- Element & Methods Vue Js -->
+	<div id="app">
+		<!-- This is Vue Js Element -->
+		<h3>{{ name }}</h3>
+		<!-- This is Vue Js Methods -->
+		<h3>{{ MyWorld() }}</h3>
+		<h3>{{ MyAge(23) }}</h3>
+	</div>
+
+	<!-- Element & Mehods Vue Js -->
+	<script type="text/javascript">
+		let app = new Vue({
+			el:'#app',
+			data:{
+				name:'Hellow World'
+			},
+			methods:{
+				MyWorld(){
+					return 'Hellow Methods'
+				},
+				MyAge(age){
+					return `${this.name} My age is ${age}`
+				}
+			}
+		})
+	</script>
+</body>
+</html>
